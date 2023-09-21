@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 45px;
+  color: #fff;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#0062ff 50%, #040042);
+}
+
+#container-placar {
+  width: 250px;
+  height: 250px;
+}
+
+#container-time1,
+#container-time2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 85px;
+}
+
+.time,
+#container-time1 .gols,
+#container-time2 .gols,
+#cronometro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-time1 {
+  background-color: #1a2e4f;
+}
+
+#container-time2 {
+  background-color: #6a2e4f;
+}
+
+#container-time1 .gols,
+#container-time2 .gols {
+  background-color: #0b9797;
+}
+
+#cronometro {
+  background-color: #2e5a6b;
+}
+
+#cronometro #minutos, #segundos,
+.gols span {
+  font-size: 70px;
+}
