@@ -1,26 +1,30 @@
-const cronometro = document.querySelector('#cronometro')
-let contadorSegundos = 0
-let contadorMinutos = 0
+const cronometro = document.querySelector('[data-js="cronometer"]')
+let incrementedCountSeconds = 0
+let incrementedCountMinutes = 0
 let timer = null
 
-timer = setInterval(() => {
-  if (contadorSegundos > 59) {
-    contadorSegundos = 0
-    contadorMinutos++
+const incrementAndShowCronometer = () => {
+  if (incrementedCountSeconds > 59) {
+    incrementedCountSeconds = 0
+    incrementedCountMinutes++
   }
 
-  contadorMinutos === 2
+  incrementedCountMinutes === 90
     ? clearInterval(timer)
     : false
 
-  let segundos = contadorSegundos < 10
-    ? `0${contadorSegundos}`
-    : contadorSegundos
-  let minutos = contadorMinutos < 10
-    ? `0${contadorMinutos}`
-    : contadorMinutos
+  let seconds = incrementedCountSeconds < 10
+    ? `0${incrementedCountSeconds}`
+    : incrementedCountSeconds
+  let minutes = incrementedCountMinutes < 10
+    ? `0${incrementedCountMinutes}`
+    : incrementedCountMinutes
 
-  cronometro.innerHTML = `<span id="minutos">${minutos}</span>:<span id="segundos">${segundos}</span>`
+  cronometro.innerHTML = `<span id="minutes">${minutes}</span>:<span id="seconds">${seconds}</span>`
 
-  contadorSegundos++
-}, 1000);
+  incrementedCountSeconds++
+}
+
+incrementAndShowCronometer()
+
+timer = setInterval(incrementAndShowCronometer, 1000);

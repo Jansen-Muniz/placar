@@ -16,45 +16,45 @@
   background: linear-gradient(#0062ff 50%, #040042);
 }
 
-#container-placar {
+#scoreboard-container {
   width: 250px;
   height: 250px;
 }
 
-#container-time1,
-#container-time2 {
+#container-team1,
+#container-team2 {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 85px;
 }
 
-.time,
-#container-time1 .gols,
-#container-time2 .gols,
-#cronometro {
+.team,
+#container-team1 .goals,
+#container-team2 .goals,
+#cronometer {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#container-time1 {
+#container-team1 {
   background-color: #1a2e4f;
 }
 
-#container-time2 {
+#container-team2 {
   background-color: #6a2e4f;
 }
 
-#container-time1 .gols,
-#container-time2 .gols {
+#container-team1 .goals,
+#container-team2 .goals {
   background-color: #0b9797;
 }
 
-#cronometro {
+#cronometer {
   background-color: #2e5a6b;
 }
 
-#cronometro #minutos, #segundos,
-.gols span {
+#cronometer #minutes, #seconds,
+.goals span {
   font-size: 70px;
 }
